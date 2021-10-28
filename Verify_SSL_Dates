@@ -1,0 +1,6 @@
+#! /bin/sh
+
+for file in /root/*.crt; do
+        echo -n "$file: "
+        openssl x509 -noout -in "$file" -dates
+done
