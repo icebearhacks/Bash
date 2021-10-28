@@ -1,0 +1,6 @@
+#! /bin/sh
+
+for file in /root/*.crt; do
+        echo -n "$file: "
+        openssl verify -verbose -CAfile /root/'root_cert_here' "$file"
+done
